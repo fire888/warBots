@@ -44,7 +44,7 @@ body {
 	font-size: 20px;
 	color: white;
 	background-color: rgba(197,232,197, 1);	
-	background-image: url(../styles/back3.png);
+	background-image: url(../styles/background.png);
 
 }	  
    
@@ -59,7 +59,7 @@ body {
 	top:20%;	  
 	font-size: 15px;  
 	background-color: rgba(21, 26, 4, 0.68);
-	background-image: url(../styles/bot.png);
+	background-image: url(../styles/pattern.png);
 	background-repeat: no-repeat;	  	  
 } 
 

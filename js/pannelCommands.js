@@ -122,7 +122,7 @@ function pannelCommands( document ){
 	}
 
   
-    function drawPannelCommands(){
+	function drawPannelCommands(){
 		pCommands = document.getElementById("pCommands");
 		pCommands.innerHTML = "";
 		for(cc=0; cc<listOfCommands.length; cc++){

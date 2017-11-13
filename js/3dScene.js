@@ -1,4 +1,4 @@
- /**
+/**
 |***************************************; 
 *  Project        : BotWars 
 *  Program name   : Threejs scene 
@@ -20,7 +20,6 @@ var changeCommands = false;
 var botID = null; 
 var stepKv;  
   
- 
 /***************************************\
 *  ROBOT COMMANDS INTERFACE HOOK 
 \***************************************/
@@ -142,13 +141,13 @@ light2.position.set(-20,20,5);
 //FLOOR
 var floorGeometry = new THREE.PlaneGeometry(1000, 1000, 5, 5);
 var floorMaterial = new THREE.MeshPhongMaterial({color:"#c3cabd", shininess: 80});
-floorMaterial.map = THREE.ImageUtils.loadTexture("model/met.jpg");
+floorMaterial.map = THREE.ImageUtils.loadTexture("model/floor_dif.jpg");
 floorMaterial.map.wrapS = floorMaterial.map.wrapT = THREE.RepeatWrapping;
 floorMaterial.map.repeat.set(40,40); 	
-floorMaterial.bumpMap = THREE.ImageUtils.loadTexture("model/metb.jpg");
+floorMaterial.bumpMap = THREE.ImageUtils.loadTexture("model/floor_bump.jpg");
 floorMaterial.bumpMap.wrapS = floorMaterial.bumpMap.wrapT = THREE.RepeatWrapping;
 floorMaterial.bumpMap.repeat.set(40, 40);	
-floorMaterial.specularMap = THREE.ImageUtils.loadTexture("model/met.jpg");	
+floorMaterial.specularMap = THREE.ImageUtils.loadTexture("model/floor_spec.jpg");	
 var floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
 floorMesh.receiveShadow = true;
 floorMesh.position.x = -300; 
@@ -158,7 +157,7 @@ scene.add(floorMesh);
 	
 //LOAD MODEL BOT
 var loader = new THREE.JSONLoader();
-loader.load('model/bot16.json', handle_load);	
+loader.load('model/bot.json', handle_load);	
 var mesh;
 	
 function handle_load(geometry, materials){
@@ -183,8 +182,6 @@ function handle_load(geometry, materials){
      
 	gameReadyWindow(); 
 }	
-
-
 
 /***************************************\
 * ANIMATION SCENE PER SECOND
@@ -219,8 +216,7 @@ function startDeathCamera(){
 		if( camera.position.y > -1){				   
 			requestAnimationFrame( animate );
 		}  
-	});
-      	
+	});    	
 }  
 	
 function draw() {
@@ -235,7 +231,7 @@ function draw() {
 	}	   
 	   
 	changeCommands = false;	
-    for ( var nn= 0; nn<arrBots.length; nn++){
+	for ( var nn= 0; nn<arrBots.length; nn++){
 		if (arrBots[nn].mesh){
 			if (arrBots[nn].fract == "enemy"){
 				if(Math.random()*1000<1){						  
@@ -291,7 +287,7 @@ function draw() {
 		
 	enemiesCount = 0;
 	playerBotsCount = 0;
-    for (va = 0; va< arrBots.length; va++){
+	for (va = 0; va< arrBots.length; va++){
 		if (arrBots[va].fract == "enemy" ){
 			enemiesCount ++;	
 		}

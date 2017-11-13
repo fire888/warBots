@@ -49,7 +49,7 @@ BOT = function(g, m, kX, kZ, color, fract){
 		
 	var plane = new THREE.PlaneGeometry(6, 6, 1,1);
 	var mat = new THREE.MeshBasicMaterial();
-	mat.map = new THREE.ImageUtils.loadTexture("model/sh-mask.png");
+	mat.map = new THREE.ImageUtils.loadTexture("model/shadow_mask.png");
 	mat.shading = THREE.SmoothShading;
 	mat.transparent = true;
 	mat.depthWrite = false;
