@@ -1,0 +1,281 @@
+
+@font-face {
+	font-family: siligury; 
+	src: url(../styles/HindSiliguri-Light.ttf); 
+}	
+
+/*-----------------------------;
+ * Start Window
+ *-----------------------------;
+ */
+	
+body {
+	color: white;
+	margin: 0;
+	background-color: white;
+	overflow: hidden;
+	min-height:500px;
+	margin:0;
+	font-family: siligury;
+	font-size:15px;
+	color:white; 	  
+}
+
+#debug {
+	position: absolute; 	 
+	top: 0;
+	left: 0px; 
+	z-index: 200;
+	color: black;  	 
+}	  
+   
+#myCanvas{
+	margin-left: -500px;
+}	 
+   
+#gameFrontPanel{
+	position: absolute; 	 
+	top: 0;
+	left: 0px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	font-size: 20px;
+	color: white;
+	background-color: rgba(197,232,197, 1);	
+	background-image: url(../styles/back3.png);
+
+}	  
+   
+#gameMessage{	 
+	z-index:70;
+	position: absolute;
+	width: 680px;
+	min-height:300px;  
+	margin:0 auto;
+	left: 50%;
+	margin-left:-340px;	  
+	top:20%;	  
+	font-size: 15px;  
+	background-color: rgba(21, 26, 4, 0.68);
+	background-image: url(../styles/bot.png);
+	background-repeat: no-repeat;	  	  
+} 
+
+#messageStartDesk{
+	margin-top: 20px;	
+	margin-left: 230px;
+} 
+ 
+#messageEndDesk{
+	margin-top: 20px;	
+	display: none;
+	margin-left: 230px;   
+}	
+
+#messageEndDesk p{
+	margin-left: 20px;   
+}
+
+#messageEndDesk a{
+	color:rgba(207, 190, 13, 1);	  
+}
+   
+#loadingMess{
+	padding-left: 24px; 
+}
+ 
+#startGame{
+	color:white; 
+	visibility: hidden;
+	width: 200px;
+	height: 0px;	  
+	margin:0 auto;
+	margin-left:5%;   
+	font-size: 15px;  
+	background-color:rgba(87, 110, 79, 0.4);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(255,255,255, 1); 		  
+}	
+
+#startGame:hover{ 
+	background-color: rgba(212, 197, 89, 0.55);
+} 
+   
+#copyRight{
+	text-align: center;
+	font-size: 15px;
+	z-index:80;
+	position: absolute;	  
+	width:200px; 
+	margin:0 auto;
+	left: 50%;	  
+	margin-left:-100px;
+	bottom:30px;  
+	color: rgba(31, 38, 11, 0.83);	  
+}
+
+#copyRight a{ 
+	color: rgba(31, 38, 11, 0.83);	  
+} 
+
+/*------------------------------;
+* Messages in Game
+*-------------------------------;
+*/  
+
+#redact{ 
+	text-align: center; 
+	font-size: 18px;
+	z-index: 20;
+	position: absolute;	  
+	width:400px; 
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin:0 auto;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -500px;   	
+	background-color: rgba(44, 47, 37, 0.4);  
+}
+   
+#mess{
+	text-align: center;	   
+	font-size: 15px;
+	z-index: 20;
+	position: absolute;	  
+	width: 200px; 
+	margin: 0 auto;
+	left: 50%;
+	margin-left: -100px;
+	bottom: 30px;     
+} 
+   
+#messVictory{
+	visibility: hidden;	
+	text-align: center;	 
+	font-size: 24px;
+	z-index:120;
+	position: absolute;	  
+	width:300px; 
+	margin:0 auto;
+	left: 50%;
+	margin-left: -150px;
+	top: 22%;	 	
+	background-color: rgba(44, 47, 37, 0.4);
+}  
+   
+/*-----------------------------;
+*  Player Death
+*------------------------------;
+*/   
+  
+#playerDeath{
+	visibility: hidden;
+	position: absolute; 	 
+	top: 0;
+	left: 0px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	background-color: rgb(231,222,71);
+	opacity: .2;	 
+}
+   
+
+/*-----------------------------;
+* Pannel programming  
+*------------------------------;
+*/  
+  
+#pannelProgramming{
+	z-index: 10;
+	position:absolute;
+	width:790px;
+	margin:0 auto;
+	left: 50%;
+	margin-left: -300px; 
+ }  
+   
+#pCommands{
+	z-index: 10;	  
+	position:absolute;
+	margin-top:-500px;
+	margin-left:350px;	  
+	float:left;
+	width: 430px;
+}
+
+#mWrapper{
+	padding-top: 20px;
+	overflow-y: scroll;
+}  
+  
+.butWrp{
+	float:left;
+	width:40px;
+}  
+   
+#pMemory{  
+	float:left;
+	width: 360px;
+	margin:20px;
+}
+   
+.str{
+	margin:3px;
+	width: 320px;
+	height:30px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;  	
+	background-color: rgba(20,20,10,0.4);
+}
+   
+.numberCommand{
+	float: left;  
+	margin:2px;
+	padding-left:5px;
+	width:30px;	 
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;      
+}   
+     
+.commandMinus  .listArrow{
+	float: left;  
+	margin:2px;
+	padding-left:5px;	 
+}
+   
+.butMinusWrp{   
+	float:left;
+	width:40px;
+} 
+ 
+.butPlusWrp{   
+	margin-top:-12px;
+	float:left;  
+} 
+   
+.closePannel{
+	width:250px; 
+	height: 35px;
+	margin-left: 10px;
+}
+   
+.command{
+	float: left;  
+	margin:2px;
+	padding-left:20px;
+	width:170px;	       
+}  
+
+.emptyCommand{
+	float: left;	   
+	width:100px;
+}
+

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>:WarBrainBots:</title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" href="styles/style.css">	
+</head>
+<body>
+	<div id="debug"></div>
+	<!--Front-Desk-----------------> 
+	<!----------------------------->  
+	<div id= "gameMessage"> 
+		<!--start message --->
+		<div id="messageStartDesk">  
+			<img src="styles/warbot1.png"/> <br/>
+			<ul>
+				<li>move mouse to look arround</li>
+				<li>left click mouse to go forward</li>
+				<li>right click mouse to go back</li>
+				<li>go to bot and press "space" to change commands</li>
+			</ul> 	 
+			<div id="loadingMess" > </>Loading</div>
+			<button id="startGame">Start</button>	 
+		</div>
+		<!--end message ----> 
+		<div id="messageEndDesk">   
+			<img src="styles/warbot1.png"/> <br/>
+			<p>War Scripts Bots Brain thanks you.</br>You try to help to good bots and bad<br/> bots are run and cry.<br/><br/>
+				<a href="index.html">Restart</a> or see <a href="http://js.otrisovano.ru/location/01/" target="_blank">another</a> locations.</br></br> 
+				All rights are not reserved.</p> 
+		</div>	  
+	</div>
+	<!--Front-Messages-------------> 
+	<!----------------------------->   
+	<div id="playerDeath"></div>   
+	<div id="gameFrontPanel"></div>  
+	<div id="copyRight">&#169; <a href="http://otrisovano.ru/" target="_blank">www.otrisovano.ru</a></div>
+	<!--Game-messages--------------> 
+	<!-----------------------------> 
+	<div id="messVictory"> </div>
+	<div id="redact">press 'Space' to change Bot program</div>  
+	<div id="mess">press "Space" for Pause</div>
+	<!--Panel-program--------------> 
+	<!----------------------------->    
+	<div id = "pannelProgramming">
+		<div id = "pMemory"></div> 
+		<div id = "pCommands"></div>
+	</div>
+	<!--Canvas---------------------> 
+	<!----------------------------->   
+	<canvas id="myCanvas"></canvas>
+	<!--Scripts--------------------> 
+	<!----------------------------->    
+	<script src="js/jquery-3.2.1.js"></script>   
+	<script src="js/three.js"></script>
+	<script src="js/FirstPersonControls.js"></script>
+	<script src="js/pannelCommands.js"></script>	
+	<script src="js/unitConstructor.js"></script>
+	<script src="js/3dScene.js"></script>   
+	<script src="js/main.js"></script>	
+</body>
+</html>
