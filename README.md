@@ -7,4 +7,6 @@ Online browser game on *threejs*.
 ![pic](https://github.com/fire888/warBots/blob/master/styles/bot1.jpg)  
   
   
-Play: www.js.otrisovano.ru/warbots/ and make scripts for move and shoot your robots.
+Make scripts for move and shoot your robots.
+
+[Let's play](http://js.otrisovano.ru/warbots/) 
